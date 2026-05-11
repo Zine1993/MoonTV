@@ -9,6 +9,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import { getConfig } from '@/lib/config';
 import RuntimeConfig from '@/lib/runtime';
 
+import GoogleAdSense from '../components/GoogleAdSense';
 import { SiteProvider } from '../components/SiteProvider';
 import { ThemeProvider } from '../components/ThemeProvider';
 
@@ -108,6 +109,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <SiteProvider siteName={siteName} announcement={announcement}>
+            <GoogleAdSense />
             {children}
           </SiteProvider>
         </ThemeProvider>
